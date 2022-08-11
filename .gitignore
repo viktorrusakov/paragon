@@ -20,3 +20,7 @@ www/public
 
 # Local Netlify folder
 .netlify
+
+# storybook and chromatic artifacts
+build-storybook.log
+.storybook/paragon.css
