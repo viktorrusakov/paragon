@@ -1,6 +1,7 @@
 var path = require('path');
 var sass = require('sass');
 var fs = require('fs');
+var outPath = process.argv[2];
 
 
 // Resolve tildas the way webpack does
@@ -20,4 +21,4 @@ var coreResult = sass.renderSync({
   importer: tildaImporter,
 });
 
-fs.writeFileSync('./dist/paragon.css', coreResult.css);
+fs.writeFileSync(outPath, coreResult.css);
