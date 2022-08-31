@@ -47,7 +47,6 @@
     "build-types": "tsc --emitDeclarationOnly",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "chromatic": "chromatic --exit-zero-on-changes --project-token=1ee0862c7a29",
     "build-scss-storybook": "node build-scss.js ./.storybook/paragon.css"
   },
   "dependencies": {
@@ -91,6 +90,8 @@
     "@edx/browserslist-config": "1.1.0",
     "@edx/eslint-config": "^3.0.0",
     "@formatjs/cli": "^5.0.2",
+    "@percy/cli": "^1.10.0",
+    "@percy/storybook": "^4.3.3",
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/git": "^10.0.1",
     "@storybook/addon-actions": "^6.5.9",
@@ -117,7 +118,6 @@
     "babel-eslint": "^10.1.0",
     "babel-jest": "^28.1.2",
     "babel-loader": "^8.2.4",
-    "chromatic": "^6.7.3",
     "commander": "^9.3.0",
     "enzyme": "^3.9.0",
     "eslint": "^7.32.0",
