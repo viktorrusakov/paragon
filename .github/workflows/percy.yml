@@ -19,4 +19,4 @@ jobs:
       - name: Build CSS stylesheet
         run: npm run build-scss-storybook
       - name: Publish to Percy
-        run: npx @percy/cli snapshot src/
+        run: npx @percy/cli storybook ./storybook-static
