@@ -1,15 +1,15 @@
-name: 'Chromatic'
+name: 'Percy'
 
 on: push
 
 jobs:
-  chromatic-deployment:
+  percy-deployment:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node: [16]
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
       - name: Setup Nodejs
         uses: actions/setup-node@v2
         with:
@@ -18,8 +18,5 @@ jobs:
         run: npm ci
       - name: Build CSS stylesheet
         run: npm run build-scss-storybook
-      - name: Publish to Chromatic
-        uses: chromaui/action@v1
-        with:
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          exitZeroOnChanges: true
+      - name: Publish to Percy
+        run: npx @percy/cli storybook ./storybook-static
